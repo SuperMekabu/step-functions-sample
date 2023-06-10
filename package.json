@@ -8,12 +8,14 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "format": "rome format lib/*.ts bin/*.ts --write"
   },
   "devDependencies": {
     "@types/jest": "^29.2.5",
     "@types/node": "18.11.18",
     "aws-cdk": "2.61.1",
+    "@aws-cdk/aws-lambda-python-alpha": "^2.83.1-alpha.0",
     "jest": "^29.3.1",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",

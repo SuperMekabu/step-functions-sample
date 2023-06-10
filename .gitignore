@@ -7,3 +7,5 @@ node_modules
 .cdk.staging
 cdk.out
 lib/src/.venv
+/lib/src/.idea/
+/lib/src/layer/

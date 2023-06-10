@@ -1,5 +1,3 @@
-import {StackProps} from "aws-cdk-lib";
+import { StackProps } from 'aws-cdk-lib';
 
-export interface AppStackProps extends StackProps {
-
-}
+export interface AppStackProps extends StackProps {}

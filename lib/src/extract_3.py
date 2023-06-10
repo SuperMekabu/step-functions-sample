@@ -32,9 +32,8 @@ def handler(event, context):
     poke_res_json = poke_res.json()
     poke = Pokemon(poke_res_json["name"], poke_res_json["height"], poke_res_json["weight"])
     return {
-        "statusCode": 200,
         "extract_3": {
-            "pokemon": poke.get_name(),
+            "name": poke.get_name(),
             "height": poke.get_height(),
             "weight": poke.get_weight(),
         }
