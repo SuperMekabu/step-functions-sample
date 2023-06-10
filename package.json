@@ -9,6 +9,7 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
+    "check": "rome check lin/*.ts bin/*.ts --apply-unsafe",
     "format": "rome format lib/*.ts bin/*.ts --write"
   },
   "devDependencies": {

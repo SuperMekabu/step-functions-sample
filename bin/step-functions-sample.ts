@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
-import * as cdk from 'aws-cdk-lib';
-import { S3Stack } from '../lib/S3Stack';
-import { LambdaStack } from '../lib/LambdaStack';
-import { StepFunctionsStack } from '../lib/StepFunctionsStack';
 import { LambdaLayerStack } from '../lib/LambdaLayerStack';
+import { LambdaStack } from '../lib/LambdaStack';
+import { S3Stack } from '../lib/S3Stack';
+import { StepFunctionsStack } from '../lib/StepFunctionsStack';
+import * as cdk from 'aws-cdk-lib';
+import 'source-map-support/register';
 
 const app = new cdk.App();
 const { bucket } = new S3Stack(app, 'StepFunctionsSampleS3Stack', {});

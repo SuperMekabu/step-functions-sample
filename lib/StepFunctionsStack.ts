@@ -1,9 +1,9 @@
-import { Stack } from 'aws-cdk-lib';
-import { Construct } from 'constructs';
 import { AppStackProps } from './props';
+import { Stack } from 'aws-cdk-lib';
 import { Bucket } from 'aws-cdk-lib/aws-s3';
-import { LambdaInvoke } from 'aws-cdk-lib/aws-stepfunctions-tasks';
 import { Chain, Parallel, StateMachine } from 'aws-cdk-lib/aws-stepfunctions';
+import { LambdaInvoke } from 'aws-cdk-lib/aws-stepfunctions-tasks';
+import { Construct } from 'constructs';
 
 interface StepFunctionsStackProps extends AppStackProps {
   bucket: Bucket;

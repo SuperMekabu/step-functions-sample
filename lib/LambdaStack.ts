@@ -1,10 +1,10 @@
-import { Duration, Stack } from 'aws-cdk-lib';
 import { AppStackProps } from './props';
-import { Construct } from 'constructs';
+import { PythonFunction, PythonLayerVersion } from '@aws-cdk/aws-lambda-python-alpha';
+import { Duration, Stack } from 'aws-cdk-lib';
+import { Runtime } from 'aws-cdk-lib/aws-lambda';
 import { Bucket } from 'aws-cdk-lib/aws-s3';
 import { LambdaInvoke } from 'aws-cdk-lib/aws-stepfunctions-tasks';
-import { PythonFunction, PythonLayerVersion } from '@aws-cdk/aws-lambda-python-alpha';
-import { Runtime } from 'aws-cdk-lib/aws-lambda';
+import { Construct } from 'constructs';
 
 interface LambdaStackProps extends AppStackProps {
   bucket: Bucket;

@@ -1,8 +1,8 @@
-import { Stack } from 'aws-cdk-lib';
 import { AppStackProps } from './props';
-import { Construct } from 'constructs';
 import { PythonLayerVersion } from '@aws-cdk/aws-lambda-python-alpha';
+import { Stack } from 'aws-cdk-lib';
 import { Runtime } from 'aws-cdk-lib/aws-lambda';
+import { Construct } from 'constructs';
 
 export class LambdaLayerStack extends Stack {
   layer: PythonLayerVersion;
