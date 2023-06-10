@@ -1,14 +1,22 @@
-# Welcome to your CDK TypeScript project
+# Step functionsの練習
 
-This is a blank project for CDK development with TypeScript.
+- step functions
+  - parallel
+- lambda
+  - layers
+- s3
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## 使い方
+- cdk部分は普通に`cdk deploy --all`
+- python部分は`cd lib/src`して操作
+  - [`lib/src/README.md`](lib/src/README.md)を参照
 
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+## 処理の流れ
+- get_records.py
+  - PokeAPIから得た情報をS3に保存
+- extract_{1,2,3}.py
+  - S3から情報を取り出して、それぞれ担当のチャンクからランダムにポケモンを選んで情報を取得
+  - その情報をPayloadに出力
+  - ここはParallelなので、3つのLambdaが並列に実行される
+- aggregator.py
+  - 3つのLambdaの結果を集約して、それぞれの情報を処理して出力
