@@ -1,5 +1,5 @@
 # Step functionsの練習
-
+## インフラ要素
 - step functions
   - parallel
 - lambda
