@@ -31,6 +31,7 @@ def handler(event, context):
     poke_res = requests.get(target_pokemon.get_url())
     poke_res_json = poke_res.json()
     poke = Pokemon(poke_res_json["name"], poke_res_json["height"], poke_res_json["weight"])
+    print(poke_res_json["fuga"])
     return {
         "extract_3": {
             "name": poke.get_name(),
